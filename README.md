@@ -8,4 +8,6 @@
    Implementar uma unica funcionalidade ou serviço.
 4) Acoplamento;
    É a força da conexão entre duas classes.
-5) 
+5) SOLID : utilizar a orientação a objetos de maneira mais correta possivel.
+   S: toda classe deve ter uma única responsabilidade.
+   O: Interfaçe bem escrita 
