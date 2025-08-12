@@ -10,4 +10,7 @@
    É a força da conexão entre duas classes.
 5) SOLID : utilizar a orientação a objetos de maneira mais correta possivel.
    S: toda classe deve ter uma única responsabilidade.
-   O: Interfaçe bem escrita 
+   O: uma classe deve estar fechada para modificação e aberta para extenções
+   L: Respeitar a assinatura do pai, trocar um filho pelo outro mantém a funcionalidade do código.
+   I: uso de interface para comunicação entre classes, evita a comunicação direta 
+   D: classe deve depender de uma abstração e não de uma implementação concreta
