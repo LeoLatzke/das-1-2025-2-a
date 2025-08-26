@@ -13,4 +13,9 @@
    O: uma classe deve estar fechada para modificação e aberta para extenções
    L: Respeitar a assinatura do pai, trocar um filho pelo outro mantém a funcionalidade do código.
    I: uso de interface para comunicação entre classes, evita a comunicação direta 
-   D: classe deve depender de uma abstração e não de uma implementação concreta
+  / D: classe deve depender de uma abstração e não de uma implementação concreta
+ 26/08/2025
+
+Decisões da arquitetura=
+Caracteristicas da arquitetura=
+Principios do design=
