@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Subscriber",
+            "request": "launch",
+            "mainClass": "br.univille.Subscriber",
+            "projectName": "eventos"
+        },
+        {
+            "type": "java",
             "name": "Launch Java Program",
             "request": "launch",
             "mainClass": "",
