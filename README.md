@@ -1,21 +1,73 @@
-# das-1-2025-2-a
+Aula 02/09/2025 e 08/09/2025
 
-1) O que é abstração?;
-   É o processo de ocultar detalhes complexos e apresentar somente funcionalidades essenciais de um sistema.
-2) Ocultamento de informações;
-   Refere-se à prática de esconder detalhes internos de implementação de um objeto ou módulo, expondo apenas uma interface pública para interação.
-3) Coesão;
-   Implementar uma unica funcionalidade ou serviço.
-4) Acoplamento;
-   É a força da conexão entre duas classes.
-5) SOLID : utilizar a orientação a objetos de maneira mais correta possivel.
-   S: toda classe deve ter uma única responsabilidade.
-   O: uma classe deve estar fechada para modificação e aberta para extenções
-   L: Respeitar a assinatura do pai, trocar um filho pelo outro mantém a funcionalidade do código.
-   I: uso de interface para comunicação entre classes, evita a comunicação direta 
-  / D: classe deve depender de uma abstração e não de uma implementação concreta
- 26/08/2025
+Diferençca entre Arquitetura e Design:
+- Arquitetura define a estrutura do software e os padrões que ele vai seguir.
+- Design é a parte de como essa estrutura vai ser implementada.
 
-Decisões da arquitetura=
-Caracteristicas da arquitetura=
-Principios do design=
+Como é a formação do conhecimento de um arquiteto modelo T?
+- Vale mais ter uma amplitude maior de conhecimento do que a especialização em um único tema.
+- Saber mais de um panorama geral ajuda a tomar decisões melhores para cada situação.
+
+Trade-Off
+- Não existe resposta certa ou errada, apenas decisões baseadas em trade-offs.
+- O arquiteto deve analisar os prós e contras de cada opção e escolher a melhor para a situação.
+  
+  Cenário: Sistema de leilão
+  - Serviço Quem dá o lance gera e envia o valor do lance para três serviços:
+    * Capturar lance
+    * Rastrear lance
+    * Analisar lance
+
+  - Opções de comunicação entre serviços
+    * Uso de Tópicos (modelo um para muitos)
+      - Serviço conecta-se a um único tópico.
+      - Novos serviços podem ser adicionados sem alterar os serviços existentes.
+      - Entrega a mensagem uma vez e todos recebem.
+
+    * Uso de Filas (modelo um para um)
+      - Serviço precisa conectar-se a múltiplas filas.
+      - Para adicionar um novo serviço é necessário criar uma nova fila e modificar o serviço para enviar mensagens para essa nova fila.
+      - Entrega a mensagem individualmente para cada um.
+
+Aula 26/08/2025 e 01/09/2025
+
+Características da arquitetura:
+- Requisitos não funcionais. (Impossível atender todos os requisitos)
+
+Decisões da arquitetura:
+- Definir a estrutura do sistema.
+
+Princípios do design:
+- Definir os princípios para construir o sistema.
+
+Arquiteto:
+- Orienta a equipe.
+- Mantém o padrão do projeto.
+- Analisa as mudanças do sistema.
+- Toma as decisões difíceis.
+
+Aula 05/08/2025, 11/08/2025 e 12/08/2025
+
+SOLID:
+- Usar a orientação a objetos da maneira correta.
+  S - Classe com responsabilidade única.
+  O - Uma classe deve estar fechada para modificações e aberta para extensões.
+  L - Trocar uma chamada de uma classe filho por outra classe filho mantém a funcionalidade do código.
+  I - Uso de interface para comunicação entre as classes. Evita comunicação direta entre elas.
+  D - Classe deve depender de uma abstração e não de implementação concreta. (Controller -> <<Interface>> -> Service)
+      - Evitar extends entre classe pai e filho onde a classe filho pode assumir o papel de outra classe filho.
+      - O método deve usar somente os seguintes métodos: de sua própria classe, de objetos passados como parâmetros, de objetos criados pelo próprio método, de atributos do próprio método. (Não usar variáveis globais)
+
+Aula 04/08/2025
+
+Abstração:
+- Representação de uma entidade de maneira simplificada.
+
+Ocultamento de informação:
+- Privar variáveis para proteção. Usado getter e setter para acessá-los em outros lugares.
+
+Coesão:
+- Faz uma funcionalidade bem feita. Facilitando a leitura e ajudando no manuseio do código.
+
+Acoplamento:
+- Força da conexão entre duas classes. Caso mexa em um código de A, pode afetar o código de B. (Herança, Implementação, Associação).
