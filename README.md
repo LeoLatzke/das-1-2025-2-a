@@ -1,6 +1,6 @@
 Aula 02/09/2025 e 08/09/2025
 
-Diferençca entre Arquitetura e Design:
+Diferença entre Arquitetura e Design:
 - Arquitetura define a estrutura do software e os padrões que ele vai seguir.
 - Design é a parte de como essa estrutura vai ser implementada.
 
